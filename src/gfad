@@ -1,0 +1,7 @@
+app.get("/",(req,res)=>{
+    req.session.user={
+        name: "Nico"
+    }
+    const sessions = Session.find({}).lean();
+    console.log(sessions)
+})
